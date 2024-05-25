@@ -74,9 +74,4 @@ bool Stack_LinkedList::isFull()
     return false; // because linked list can't be full
 }
 
-Stack_LinkedList::~Stack_LinkedList()
-{
-    delete stack;
-}
-
 #endif

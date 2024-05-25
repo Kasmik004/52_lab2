@@ -1,3 +1,6 @@
+#ifndef STACK_H
+#define STACK_H
+
 class Stack
 {
 public:
@@ -8,3 +11,5 @@ public:
     virtual bool isFull() = 0;
     virtual ~Stack() {}
 };
+
+#endif

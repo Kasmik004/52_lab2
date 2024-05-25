@@ -13,8 +13,15 @@ private:
     LinkedList *queue;
 
 public:
-    Queue_LinkedList() {}
-    ~Queue_LinkedList() {}
+    Queue_LinkedList()
+    {
+        queue = new LinkedList();
+    }
+
+    ~Queue_LinkedList()
+    {
+        delete queue;
+    }
 
     void enqueue(int item);
     int dequeue();
@@ -46,13 +53,13 @@ int Queue_LinkedList::dequeue()
 
 int Queue_LinkedList::front()
 {
-    if (!(queue->isEmpty()))
+    if (!queue->isEmpty())
     {
-        return (queue->getHeadElement());
+        return queue->getHeadElement();
     }
     else
     {
-        return -1; //-1 refers to undersied output
+        return -1; // -1 refers to an undesired output
     }
 }
 
@@ -68,19 +75,14 @@ bool Queue_LinkedList::isFull()
 
 int Queue_LinkedList::back()
 {
-    if (!(queue->isEmpty()))
+    if (!queue->isEmpty())
     {
-        return (queue->getTailElement());
+        return queue->getTailElement();
     }
     else
     {
-        return -1; //-1 refers to undersied output
+        return -1; // -1 refers to an undesired output
     }
-}
-
-Queue_LinkedList::~Queue_LinkedList()
-{
-    delete queue;
 }
 
 #endif

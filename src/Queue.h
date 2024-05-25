@@ -1,3 +1,6 @@
+#ifndef QUEUE_H
+#define QUEUE_H
+
 class Queue
 {
 public:
@@ -9,3 +12,5 @@ public:
     virtual int back() = 0;
     virtual ~Queue() {}
 };
+
+#endif
